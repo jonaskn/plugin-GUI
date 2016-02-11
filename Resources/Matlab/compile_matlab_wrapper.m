@@ -11,9 +11,9 @@ mex -setup
 
 %GUIfolder = 'C:\Users\Shay\Documents\GitHub\GUI';
 %GUIfolder = '/home/jsiegle/Programming/GUI/';
-GUIfolder = '/Users/Josh/Programming/open-ephys/GUI';
+GUIfolder = '~/Documents/code/resources/plugin-GUI';
 
-headerFolder = [GUIfolder, '/Resources/ZeroMQ/include'];
+headerFolder = '/usr/local/Cellar/zeromq/4.1.4/include';
 
 if strcmp(computer,'PCWIN')
     libFolder = [GUIfolder, '/Resources/ZeroMQ/lib_x86'];
@@ -28,7 +28,7 @@ elseif strcmp(computer,'GLNX86') || strcmp(computer,'GLNXA64')
     libraryName = 'zmq';
     cppFile = 'unix/zeroMQwrapper.cpp';
 elseif strcmp(computer,'MACI64')
-    libFolder = '/opt/local/lib';
+    libFolder = '/usr/local/Cellar/zeromq/4.1.4/lib';
     libraryName = 'zmq';
     cppFile = 'unix/zeroMQwrapper.cpp';
 end
